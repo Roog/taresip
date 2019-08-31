@@ -38,10 +38,19 @@ size_t odict_count(const struct odict *o, bool nested);
 int odict_debug(struct re_printf *pf, const struct odict *o);
 
 int odict_entry_add(struct odict *o, const char *key,
-		    enum odict_type type, ...);
+		    int type, ...);
 void odict_entry_del(struct odict *o, const char *key);
 int odict_entry_debug(struct re_printf *pf, const struct odict_entry *e);
 
 bool odict_type_iscontainer(enum odict_type type);
 bool odict_type_isreal(enum odict_type type);
 const char *odict_type_name(enum odict_type type);
+
+
+/* Helpers */
+
+const struct odict_entry *odict_get_type(const struct odict *o,
+					enum odict_type type, const char *key);
+const char *odict_string(const struct odict *o, const char *key);
+bool odict_get_number(const struct odict *o, uint64_t *num, const char *key);
+bool odict_get_boolean(const struct odict *o, bool *value, const char *key);

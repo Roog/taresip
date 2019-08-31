@@ -93,7 +93,9 @@ typedef bool _Bool;
 
 /* Needed for MS compiler */
 #ifdef _MSC_VER
+#ifndef __cplusplus
 #define inline _inline
+#endif
 #endif
 
 
@@ -135,7 +137,7 @@ typedef bool _Bool;
 #endif
 
 /** Defines a soft breakpoint */
-#if (defined(__i386__) || defined(__x86_64__)) && !defined(__SYMBIAN32__)
+#if (defined(__i386__) || defined(__x86_64__))
 #define BREAKPOINT __asm__("int $0x03")
 #else
 #define BREAKPOINT
