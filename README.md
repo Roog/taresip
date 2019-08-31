@@ -14,7 +14,7 @@
 Add the following line to your `Podfile` and run `pod install` command.
 
 ```
-pod 'taresip'
+pod 'taresip', :git => 'https://github.com/andrewvmail/taresip.git'
 ```
 
 ### Build manually
