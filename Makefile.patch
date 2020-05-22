@@ -1,11 +1,20 @@
 --- Makefile.old	2020-05-22 00:05:40.000000000 -0700
-+++ Makefile	2020-05-22 00:09:31.000000000 -0700
++++ Makefile	2020-05-22 00:16:02.000000000 -0700
 @@ -7,7 +7,7 @@
  
  BUILD_DIR	:= build
  CONTRIB_DIR	:= contrib
 -BARESIP_SRC	:= baresip-0.6.0.tar.gz
-+BARESIP_SRC	:= baresip-0.6.6.tar.gz
++BARESIP_SRC	:= v0.6.6.tar.gz
  LIBREM_SRC	:= rem-0.6.0.tar.gz
  LIBRE_SRC	:= re-0.6.0.tar.gz
+ 
+@@ -23,7 +23,7 @@
+ 
+ 
+ fetch:
+-	@curl -LO http://www.creytiv.com/pub/$(BARESIP_SRC)
++	@curl -LO https://github.com/alfredh/baresip/archive/$(BARESIP_SRC)
+ 	@curl -LO http://www.creytiv.com/pub/$(LIBREM_SRC)
+ 	@curl -LO http://www.creytiv.com/pub/$(LIBRE_SRC)
  
