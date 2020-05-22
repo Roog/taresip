@@ -1,0 +1,4 @@
+[submodule "baresip-ios"]
+	path = baresip-ios
+	url = https://github.com/alfredh/baresip-ios.git
+	branch = master
